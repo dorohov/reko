@@ -1,0 +1,16 @@
+@circe-light: 		circe-light;
+@circe-bold: 		circe-bold;
+@circe-ebold: 		circe-extrabold;
+.include-custom-font(@family: @circe-light, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src:url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+/*circe*/
+.include-custom-font(@family: @circe-light, @weight: normal, @style: normal);
+.include-custom-font(@family: @circe-bold, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @circe-ebold, @weight: normal, @style: normal);
+/*end's circe*/

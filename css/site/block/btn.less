@@ -1,0 +1,120 @@
+.btn-site{
+	display: inline-block;
+	border: none;
+	outline: none;
+	background: none;
+	text-decoration: none;
+	transition: @transition-site;
+	&:focus,
+	&:hover{
+		text-decoration: none;
+	}
+	&:focus{
+		color: inherit;
+	}
+}
+.btn-line{
+	background: fadeout(@white, 100%);
+	border-radius: 20px;
+	border: 1px solid;  
+	padding: 2px 15px 0;
+	letter-spacing: 0.8px;
+	font-size: 12px;
+    line-height: 29px;
+    text-transform: uppercase;
+    font-family: @calibri;
+	&.big{
+		line-height: 44px;
+		font-size: 14px;
+		padding: 2px 30px 0;
+		border-radius: 30px;
+		@media @media-size-xs-l{
+			line-height: 36px;
+		}
+	}
+} 
+.btn-white{
+	color: @white; 
+	border-color: @white; 
+	&:focus{
+		color: @white;
+	}
+	&:hover{
+		color: @black;
+		background: fadeout(@white, 0%);
+		border-color: @white; 
+	}
+} 
+.btn-blue-bright{
+	color: @blue-bright; 
+	border-color: @blue-bright; 
+	&:focus{
+		color: @blue-bright;
+	}
+	&:hover{
+		color: @black;
+		background: fadeout(@white, 0%);
+		border-color: @white; 
+	}
+} 
+.btn-enter{
+	span{
+		@media @media-device {
+			display: none;
+		}
+	}
+	&:before{
+		font-family: @icon;
+		content: @icon-user;
+		margin-right: 5px;
+		font-size: 12px;
+		//transition: @transition-site;
+	}	
+} 
+.btn-close{
+	&:before{
+		font-family: @icon;
+		content: @icon-close;
+		display: block;
+		width: 32px;
+		line-height: 30px;
+		color: @white;
+		border: 1px solid @white;
+		border-radius: 50%;
+		font-size: 12px;
+		transition: @transition-site;
+		text-align: center;
+	}
+	&:hover{
+		&:before{
+			background: @white;
+			color: @black;
+		}
+	}
+}
+.btn-play{
+	&:before{
+		font-family: @icon;
+		content: @icon-play;
+		display: block;
+		color: @white;
+		border-radius: 50%;
+		font-size: 110px;
+		line-height: 110px;
+		transition: @transition-site;
+		text-align: center;
+		@media @media-size-xs{
+			font-size: 55px;
+			line-height: 55px;
+		}
+		@media @media-size-sm{
+			font-size: 80px;
+			line-height: 80px;
+		}
+	}
+	&:hover{
+		&:before{
+			background: @blue-light;
+		}
+	}
+}
